@@ -165,7 +165,7 @@ def generate_video(
             num_frames=num_frames,  # Number of frames to generate
             use_dynamic_cfg=True,  # This id used for DPM scheduler, for DDIM scheduler, it should be False
             guidance_scale=guidance_scale,
-            generator=torch.Generator().manual_seed(seed),  # Set the seed for reproducibility
+            # generator=torch.Generator().manual_seed(seed),  # Set the seed for reproducibility
         ).frames[0]
     elif generate_type == "t2v":
         video_generate = pipe(
@@ -177,7 +177,7 @@ def generate_video(
             num_frames=num_frames,
             use_dynamic_cfg=True,
             guidance_scale=guidance_scale,
-            generator=torch.Generator().manual_seed(seed),
+            # generator=torch.Generator().manual_seed(seed),
         ).frames[0]
     else:
         video_generate = pipe(
@@ -190,7 +190,7 @@ def generate_video(
             num_frames=num_frames,
             use_dynamic_cfg=True,
             guidance_scale=guidance_scale,
-            generator=torch.Generator().manual_seed(seed),  # Set the seed for reproducibility
+            # generator=torch.Generator().manual_seed(seed),  # Set the seed for reproducibility
         ).frames[0]
     export_to_video(video_generate, output_path, fps=fps)
 
