@@ -1,5 +1,7 @@
-DIR_PRJ=/home/laptq/CogVideo
-VENV_PARENT=/mnt/hdd10tb/Users/laptq/CogVideo
+# DIR_PRJ=/home/laptq/CogVideo
+# VENV_PARENT=/mnt/hdd10tb/Users/laptq/CogVideo
+DIR_PRJ=/home/lap_awlv/CogVideo
+VENV_PARENT=/media/home4/free_space/lap_awlv/CogVideo
 
 mkdir -p $VENV_PARENT
 
